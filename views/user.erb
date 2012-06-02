@@ -1,0 +1,83 @@
+<div class="profile clearfix">
+
+	<div class="profile-nav">
+		<div class="profile-thumb-wrapper">
+			<img class="profile-thumb" src="" width="140" height="190" />
+		</div>
+		<div class="menu-list-wrapper">
+			<ul class="menu-list">
+				<li class="menu-list-item">
+					<a class="menu-list-item-link current" href="">Profile</a>
+				</li>
+				<li class="menu-list-item">
+					<a class="menu-list-item-link" href="">Photos</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="profile-content">
+
+		<div class="profile-content-banner">
+			<%= @user.name %>
+		</div>
+
+		<div>
+			<p>stream</p>
+		</div>
+
+	</div>
+
+</div>
+
+<style>
+
+.profile-nav {
+	display: inline-block;
+	vertical-align: top;
+	width: 15.5%;
+	margin-right: 10px;
+}
+
+.menu-list {
+	margin: 0;
+	padding: 0;
+}
+
+.menu-list-item {
+	list-style-type: none;
+}
+
+.menu-list-item-link {
+	margin: 3px 0;
+	padding: 5px 10px;
+	border: #ccc 1px solid;
+	color: #444;
+	background: #e8e8e8;
+	font-weight: bold;
+	border-radius: 4px;
+	display: block;
+	font-size: 80%;
+	text-decoration: none;
+}
+
+.current .menu-list-item-link,
+.menu-list-item-link:hover {
+	color: #e8e8e8;
+	background: #444;
+}
+
+.profile-content {
+	display: inline-block;
+	vertical-align: top;
+	width: 80%;
+	border: red 1px solid;
+}
+
+.profile-content-banner {
+	border-radius: 4px;
+	background: #e8e8e8;
+	padding: 5px;
+}
+
+</style>

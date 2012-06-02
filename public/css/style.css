@@ -15,7 +15,6 @@ body { margin: 0; font-size: 1em; line-height: 1.4; }
 ::selection { background: #fe57a1; color: #fff; text-shadow: none; }
 
 a { color: #00e; }
-a:visited { color: #551a8b; }
 a:hover { color: #06e; }
 a:focus { outline: thin dotted; }
 a:hover, a:active { outline: 0; }
@@ -75,7 +74,7 @@ td { vertical-align: top; }
    Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
    ========================================================================== */
 
-body{ font:16px/26px Helvetica, Helvetica Neue, Arial; }
+body{ font:16px/26px Helvetica, Helvetica Neue, Arial; background-color: #d7d7d7;}
 
 .wrapper{
   width:90%;
@@ -86,15 +85,9 @@ body{ font:16px/26px Helvetica, Helvetica Neue, Arial; }
     ALL: Orange Theme
    =================== */
 
-#header-container{ border-bottom: 20px solid #e44d26; }
+#header-container{ background: black; }
 #footer-container{ border-top:    20px solid #e44d26; }
 #main aside      { border-top:    20px solid #e44d26; }
-
-#header-container,
-#footer-container,
-#main aside{
-  background:#f16529;
-}
 
 #title{ color:white; }
 
@@ -131,21 +124,15 @@ nav a:hover{
    ============== */
 
 #main{
-  padding:30px 0;
+  border: green 1px solid;
+  background-color: white;
+  border-radius: 5px;
+  margin: 20px auto;
+  padding: 20px;
 }
 
 #main article h1{
   font-size:2em;
-}
-
-#main aside{
-  color:white;
-  padding:0px 5% 10px;
-}
-
-#footer-container footer{
-  color:white;
-  padding:20px 0;
 }
 
 /* ===============
