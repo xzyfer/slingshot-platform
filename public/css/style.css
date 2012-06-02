@@ -237,6 +237,83 @@ nav a:hover{
 }
 
 
+.profile-nav {
+  display: inline-block;
+  vertical-align: top;
+  width: 15.5%;
+  margin-right: 10px;
+}
+
+.profile-info-list,
+.menu-list {
+  margin: 0;
+  padding: 0;
+}
+
+.profile-info-list-item,
+.menu-list-item {
+  list-style-type: none;
+}
+
+.menu-list-item-link {
+  margin: 3px 0;
+  padding: 5px 10px;
+  border: #ccc 1px solid;
+  color: #444;
+  background: #e8e8e8;
+  font-weight: bold;
+  border-radius: 4px;
+  display: block;
+  font-size: 80%;
+  text-decoration: none;
+}
+
+.current .menu-list-item-link,
+.menu-list-item-link:hover {
+  color: #e8e8e8;
+  background: #444;
+}
+
+.profile-content-wrapper {
+  display: inline-block;
+  vertical-align: top;
+  width: 80%;
+}
+
+.profile-content-banner {
+  border-radius: 4px;
+  background: #e8e8e8;
+  padding: 5px 15px;
+}
+
+.profile-content {
+  font-size: 83%;
+  line-height: 1.1;
+  margin: 20px 0;
+  border: #ccc 1px solid;
+  border-radius: 4px;
+  padding: 15px;
+}
+
+.profile-info-list {
+  font-size: 70%;
+}
+
+.profile-info-list-item {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.profile-info-list-item:first-child {
+  margin-left: 0;
+}
+
+.profile-info-list p {
+  margin: 0;
+  line-height: 1.2;
+}
+
+
 
 
 
