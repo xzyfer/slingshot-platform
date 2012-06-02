@@ -1,4 +1,9 @@
 require 'sinatra'
+
+Dir["mixins/*"].each do |f|
+  load "./#{f}"
+end
+
 helpers do
   Dir["helpers/*"].each do |f|
     load "./#{f}"
