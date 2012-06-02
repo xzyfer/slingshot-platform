@@ -12,7 +12,7 @@ module Slingshot
 
       def options
         @opts ||= {
-          :site => "https://api.twitter.com/"
+          :site => "http://api.twitter.com/"
         }
       end
 
