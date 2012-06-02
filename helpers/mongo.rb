@@ -34,5 +34,5 @@ end
 
 COLLECTIONS={}
 def mongo(collection_name)
-  COLLECTIONS[collection_name] ||= Slingshot::Helpers::MongoCollection.new(collection_name)
+  COLLECTIONS[collection_name.to_sym] ||= Slingshot::Helpers::MongoCollection.new(collection_name)
 end
