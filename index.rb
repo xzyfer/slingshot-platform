@@ -15,7 +15,7 @@ Dir["models/*"].each do |f|
 end
 
 before do
-  @user = User.find(params[:user])
+  @user = User.find("name" => params[:user])
 end
 
 get '/home' do

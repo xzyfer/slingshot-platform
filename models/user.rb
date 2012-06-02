@@ -1,4 +1,6 @@
 class User
+  extend Finder
+
   def self.find(id)
     if !(user = _find_all(id)).empty?
       self.new(user.first)
@@ -9,10 +11,6 @@ class User
     if id
       _find_all(id).map{ |u| self.new(u) }
     end
-  end
-
-  def self._find_all(id)
-    mongo(:user).find("name" => id)
   end
 
   def initialize(params)
