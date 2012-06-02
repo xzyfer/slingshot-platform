@@ -1,11 +1,18 @@
 class User
   def self.find(id)
-    if id && !(user = mongo(:user).find("name" => id)).empty?
+    if !(user = _find_all(id)).empty?
       self.new(user.first)
-    else
-      # No such user
-      nil
     end
+  end
+
+  def self.find_all(id)
+    if id
+      _find_all(id).map{ |u| self.new(u) }
+    end
+  end
+
+  def self._find_all(id)
+    mongo(:user).find("name" => id)
   end
 
   def initialize(params)
@@ -16,4 +23,5 @@ class User
   def method_missing(sym, *args)
     @params[sym.to_s]
   end
+
 end
