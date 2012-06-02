@@ -20,6 +20,10 @@ module Slingshot
         @coll = @mongo.db[name]
       end
 
+      def find(query)
+        @coll.find(query).to_a
+      end
+
       def insert(row)
         @coll.insert(row)
       end
