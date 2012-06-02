@@ -1,0 +1,15 @@
+
+<p><%= @users.length %> Results</p>
+<hr />
+<ul class="tile-collection tile-collection-user">
+	<% @users.each do |user| %>
+		<li class="tile tile-user">
+			<a class="tile-user-link" href="/user/<%= user['id'] %>">
+				<span class="tile-user-image-wrapper">
+					<img class="tile-user-image" src="http://placekitten.com/g/80/80" />
+				</span>
+				<span class="tile-user-link-content"><%= user['name'] %></span>
+			</a>
+		</li>
+	<% end %>
+</ul>

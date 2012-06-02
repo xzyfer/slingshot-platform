@@ -159,6 +159,10 @@ nav a:hover{
    Author:
    ========================================================================== */
 
+#main {
+  width: 950px;
+}
+
 .center {
   text-align: center;
 }
@@ -201,6 +205,49 @@ nav a:hover{
   position: relative;
 }
 
+.tile-collection {
+  margin: 0;
+  padding: 0;
+}
+
+.title {
+  font-weight: bold;
+  margin: .2em 0;
+}
+
+.tile-user {
+  list-style-type: none;
+  display: inline-block;
+  margin: 0 15px 15px 0;
+  border: green 1px solid;
+}
+
+.tile-user:nth-child(8n) {
+  margin-right: 0;
+  border: red 1px solid;
+}
+
+.tile-user-image-wrapper {
+  display: block;
+  border: drakGrey 1px solid;
+  background-color: rgba(209, 209, 209, 0.5);
+  border-radius: 3px;
+  padding: 10px;
+  font-size: 80%;
+}
+
+.tile-user-link {
+  text-decoration: none;
+}
+
+.tile-user-link-content {
+  color: #0582F5;
+}
+
+.tile-user-link-content:hover {
+  text-decoration: underline:;
+  color: rgba(5, 130, 245, 0.5);
+}
 
 
 

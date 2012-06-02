@@ -22,7 +22,19 @@ get '/home' do
   erb :index
 end
 
-get '/create/:name' do
-  mongo(:user).insert({ 'name' => params[:name] });
+get '/user/:userid' do
+  @user = User.find('id' => params[:userid])
+  erb :user
+end
+
+get '/search/:name' do
+  @users = mongo('user').find({'name' => /.*#{params[:name]}.*/i})
+  erb :search_results
+end
+
+get '/create/:name/:times' do
+  (1..params[:times].to_i).to_a.each { |i|
+    mongo(:user).insert({ 'id' => i, 'name' => params[:name] });
+  }
   erb :index
 end
