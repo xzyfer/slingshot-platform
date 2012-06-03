@@ -51,22 +51,15 @@
 		</div>
 
 		<div class="profile-content">
-			<p class="title">About</p>
-			<p>Pet Proliferations</p>
-
-
-			<p class="title">Company Overview</p>
-			<p>
-				Kitty ipsum dolor sit amet, claw run nullam litter box purr, tail flick libero dolor dolor nullam quis nunc.
-				</br />
-				</br />
-				 Vel non tail flick dolor leap, nunc feed me tempus etiam biting sleep on your face. Vel enim scratched bat, sleep on your keyboard rutrum nam toss the mousie stretching et. Sleep on your face aliquam fluffy fur attack your ankles cras nec, dolor nibh vel give me fish attack your ankles non tortor.
-			</p>
-
-			<p class="title">Description</p>
-			<p>
-				Lick nibh feed me sagittis, nibh justo tail flick quis nunc feed me lick lick. Faucibus scratched sleep on your keyboard give me fish, stretching pellentesque stretching etiam et tortor cras nec.
-			</p>
+      <%= case params[:view]
+         when "photos"
+           erb :user_protos
+         when "posts"
+           erb :user_posts
+         else
+           erb :user_profile
+         end
+         %>
 		</div>
 
 	</div>

@@ -28,6 +28,11 @@ get '/user/:userid' do
   erb :user
 end
 
+get '/user/:userid/:view' do
+  @user = mongo('user').find('id' => 1).to_a.first
+  erb :user
+end
+
 get '/search/:name' do
   @param = params[:name]
   @users = mongo('user').find('name' => /.*#{@param}.*/i).to_a
