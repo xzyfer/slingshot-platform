@@ -191,6 +191,31 @@ nav a:hover{
   position: relative;
 }
 
+.social-signin {
+  display: inline-block;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  width: 150px;
+  height: 23px;
+}
+
+.social-signin:hover {
+  background-position: 0 -24px;
+}
+
+.social-signin--twitter {
+  background-image: url(/images/twitter_signin.png);
+}
+
+.social-signin--facebook {
+  background-image: url(/images/facebook_signin.png);
+}
+
+.social-signin--linkedin {
+  background-image: url(/images/linkedin_signin.png);
+}
+
+
 .tile-collection {
   margin: 0;
   padding: 0;
@@ -227,7 +252,7 @@ nav a:hover{
 .profile-nav {
   display: inline-block;
   vertical-align: top;
-  width: 15.5%;
+  width: 15%;
   margin-right: 10px;
 }
 
@@ -264,7 +289,7 @@ nav a:hover{
 .profile-content-wrapper {
   display: inline-block;
   vertical-align: top;
-  width: 83%;
+  width: 83.5%;
 }
 
 .profile-content-banner {
