@@ -18,6 +18,10 @@ before do
   @user = mongo('user').find("name" => params[:user])
 end
 
+get '/' do
+  erb :index
+end
+
 get '/home' do
   erb :index
 end
