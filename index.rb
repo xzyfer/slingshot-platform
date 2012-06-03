@@ -23,17 +23,20 @@ get '/home' do
 end
 
 get '/user/:userid' do
+  @param = params[:param]
   @user = mongo('user').find('id' => 1).to_a.first
   erb :user
 end
 
 get '/search/:name' do
-  @users = mongo('user').find('name' => /.*#{params[:name]}.*/i).to_a
+  @param = params[:name]
+  @users = mongo('user').find('name' => /.*#{@param}.*/i).to_a
   erb :search_results
 end
 
 post '/search' do
-  @users = mongo('user').find('name' => /.*#{params[:name]}.*/i).to_a
+  @param = params[:name]
+  @users = mongo('user').find('name' => /.*#{@param}.*/i).to_a
   erb :search_results
 end
 

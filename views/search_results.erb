@@ -4,7 +4,7 @@
 <ul class="tile-collection tile-collection-user">
 	<% @users.each do |user| %>
 		<li class="tile tile-user">
-			<a class="tile-user-link" href="/user/<%= user['id'] %>">
+			<a class="tile-user-link" href="/user/<%= user['id'] %>?param=<%= @param %>">
 				<span class="tile-user-image-wrapper">
 					<img class="tile-user-image" src="/images/status-cats/<%= user['image'] %>.jpeg" width="80" height="80" />
 				</span>
