@@ -2,7 +2,7 @@
 
 	<div class="profile-nav">
 		<div class="profile-thumb-wrapper">
-			<img class="profile-thumb" src="/images/status-cats/<%= @user.image %>.jpeg" width="140" height="190" />
+			<img class="profile-thumb" src="/images/status-cats/<%= @user['image'] %>.jpeg" width="140" height="190" />
 		</div>
 		<div class="menu-list-wrapper">
 			<ul class="menu-list">
@@ -22,7 +22,7 @@
 	<div class="profile-content-wrapper">
 
 		<div class="profile-content-banner">
-			<p class="title"><%= @user.name %></p>
+			<p class="title"><%= @user['name'] %></p>
 
 			<hr />
 
