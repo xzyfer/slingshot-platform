@@ -124,7 +124,6 @@ nav a:hover{
    ============== */
 
 #main{
-  border: green 1px solid;
   background-color: white;
   border-radius: 5px;
   margin: 20px auto;
@@ -265,7 +264,7 @@ nav a:hover{
 .profile-content-wrapper {
   display: inline-block;
   vertical-align: top;
-  width: 80%;
+  width: 83%;
 }
 
 .profile-content-banner {
