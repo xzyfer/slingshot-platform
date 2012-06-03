@@ -14,7 +14,7 @@ body { margin: 0; font-size: 1em; line-height: 1.4; }
 ::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
 ::selection { background: #fe57a1; color: #fff; text-shadow: none; }
 
-a { color: #0582F5; text-decoration: none; }
+a { color: #444; text-decoration: none; }
 a:hover { color: rgba(5, 130, 245, 0.5); }
 a:focus { outline: thin dotted; }
 a:hover, a:active { outline: 0; }
@@ -154,6 +154,11 @@ object {
   display: block;
 }
 
+.link:hover {
+  text-decoration: underline;
+  color: rgba(68, 68, 68, 0.65);
+}
+
 .center {
   text-align: center;
 }
@@ -248,7 +253,7 @@ object {
   margin-right: 0;
 }
 
-.tile-user-link-content > * {
+.tile-user-post-content > * {
   margin: 0;
   padding: 0;
   line-height: 1.2;
@@ -256,16 +261,21 @@ object {
   text-decoration: none;
 }
 
-.tile-user-link-content small {
+.tile-user-post-content small {
   color: rgba(68, 68, 68, 0.68);
 }
 
-.tile-user-link-content,
+.tile-user-post-content,
 .tile-user-image-wrapper {
   display: block;
   border: drakGrey 1px solid;
   background-color: rgba(209, 209, 209, 0.5);
   border-radius: 3px;
+  font-size: 80%;
+  padding: 10px;
+}
+
+.tile-user-link-content {
   padding: 10px;
   font-size: 80%;
 }
