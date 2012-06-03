@@ -11,13 +11,13 @@
     <div class="menu-list-wrapper">
       <ul class="menu-list">
         <li class="menu-list-item <%= "current" if user_view_is? :profile %>">
-        <a class="menu-list-item-link" href="<%= link_to_user_view("profile") %>">Profile</a>
+        <a class="menu-list-item-link" href="<%= link_to_user_view("profile") %>?param=<%= @param %>">Profile</a>
         </li>
         <li class="menu-list-item <%= "current" if user_view_is? :posts  %>">
-        <a class="menu-list-item-link" href="<%= link_to_user_view("posts") %>">Posts</a>
+        <a class="menu-list-item-link" href="<%= link_to_user_view("posts") %>?param=<%= @param %>">Posts</a>
         </li>
         <li class="menu-list-item <%= "current" if user_view_is? :photos %>">
-        <a class="menu-list-item-link" href="<%= link_to_user_view("photos") %>">Photos</a>
+        <a class="menu-list-item-link" href="<%= link_to_user_view("photos") %>?param=<%= @param %>">Photos</a>
         </li>
       </ul>
     </div>
