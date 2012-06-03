@@ -1,15 +1,15 @@
 
 <ul class="tile-collection tile-collection-posts">
-	<% RandomData.posts.each do |post| %>
-		<li class="tile tile-post">
-			<a class="tile-post-link" href="">
-				<span class="tile-user-post-wrapper">
-					<span class="tile-user-link-content">
-						<p class="title"><%= post['title'] %> <small>- 16th July 1969</small></p>
-						<p><%= post['body'] %></p>
-					</span>
-				</span>
-			</a>
-		</li>
-	<% end %>
+  <% RandomData.posts.each do |post| %>
+    <li class="tile tile-post">
+      <a class="tile-post-link" href="">
+        <span class="tile-user-post-wrapper">
+          <span class="tile-user-link-content">
+            <p class="title"><%= post['title'] %> <small>- 16th July 1969</small></p><p><%= post_via(post) if post['network'] %></p>
+            <p><%= post['body'] %></p>
+          </span>
+        </span>
+      </a>
+    </li>
+  <% end %>
 </ul>
