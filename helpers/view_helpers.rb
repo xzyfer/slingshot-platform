@@ -99,7 +99,7 @@ class RandomData; class << self
       {'title' => 'Arrggh! The cats, they\'re eating my face', 'body' => 'Puking adipiscing chase the red dot rip the couch, biting vulputate faucibus ac vel rutrum.', 'network' => 'twitter'},
       {'title' => 'I love cats', 'body' => '<object style="height: 390px; width: 640px"><param name="movie" value="http://www.youtube.com/v/sP4NMoJcFd4?version=3&feature=player_detailpage"><param name="allowFullScreen" value="true"><param name="allowScriptAccess" value="always"><embed src="http://www.youtube.com/v/sP4NMoJcFd4?version=3&feature=player_detailpage" type="application/x-shockwave-flash" allowfullscreen="true" allowScriptAccess="always" width="640" height="360"></object>', 'network' => 'facebook'},
       {'title' => 'Soft kitty, warm kitty, little ball of fur', 'body' => '<object style="height: 390px; width: 640px"><param name="movie" value="http://www.youtube.com/v/sIp77PUvLTE?version=3&feature=player_detailpage&start=60"><param name="allowFullScreen" value="true"><param name="allowScriptAccess" value="always"><embed src="http://www.youtube.com/v/sIp77PUvLTE?version=3&feature=player_detailpage&start=60" type="application/x-shockwave-flash" allowfullscreen="true" allowScriptAccess="always" width="640" height="360"></object>', 'network' => 'facebook'}
-    ]
+    ].shuffle
   end
 
 end; end
