@@ -14,7 +14,7 @@ body { margin: 0; font-size: 1em; line-height: 1.4; }
 ::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
 ::selection { background: #fe57a1; color: #fff; text-shadow: none; }
 
-a { color: #0582F5; }
+a { color: #0582F5; text-decoration: none; }
 a:hover { color: rgba(5, 130, 245, 0.5); }
 a:focus { outline: thin dotted; }
 a:hover, a:active { outline: 0; }
@@ -226,6 +226,7 @@ nav a:hover{
   margin: .2em 0;
 }
 
+.tile-post,
 .tile-user,
 .tile-user-photo {
   list-style-type: none;
@@ -233,14 +234,23 @@ nav a:hover{
   margin: 0 15px 15px 0;
 }
 
-.tile-user:nth-child(8n) {
-  margin-right: 0;
+.tile-post {
+  display: block;
 }
 
+.tile-user:nth-child(8n),
 .tile-user-image:nth-child(6n) {
   margin-right: 0;
 }
+.tile-user-link-content > * {
+  margin: 0;
+  padding: 0;
+  line-height: 1.2;
+  color: #444;
+  text-decoration: none;
+}
 
+.tile-user-link-content,
 .tile-user-image-wrapper {
   display: block;
   border: drakGrey 1px solid;

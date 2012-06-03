@@ -1,0 +1,15 @@
+
+<ul class="tile-collection tile-collection-posts">
+	<% @posts.each do |post| %>
+		<li class="tile tile-post">
+			<a class="tile-post-link" href="">
+				<span class="tile-user-post-wrapper">
+					<span class="tile-user-link-content">
+						<p class="title"><%= post['title'] %></p>
+						<p><%= post['body'] %></p>
+					</span>
+				</span>
+			</a>
+		</li>
+	<% end %>
+</ul>
