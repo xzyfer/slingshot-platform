@@ -1,3 +1,11 @@
+if RUBY_VERSION =~ /1.8/
+  class Array
+    def sample
+      self[rand(length)]
+    end
+  end
+end
+
 def user_view
   (params[:view] || :profile).to_sym
 end
