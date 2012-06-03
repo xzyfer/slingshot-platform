@@ -18,6 +18,10 @@ def link_to_user_view(view)
   "/user/#{params[:userid]}/#{view}"
 end
 
+def post_via(post)
+  "<em>via</em> #{post['network']}"
+end
+
 class RandomData; class << self
   def address
     "#{street_number} #{street}, #{suburb}, #{postcode}"
@@ -80,10 +84,10 @@ class RandomData; class << self
 
   def posts
     [
-      {'title' => 'OMG I love cats!', 'body' => 'Suscipit jump biting tail flick tortor shed everywhere, feed me jump sleep on your face pharetra pharetra.'},
-      {'title' => 'No I mean like I seriously love cats!', 'body' => 'Meow sleep in the sink chase the red dot I don\'t like that food, tortor kittens rhoncus sleep on your keyboard quis nunc stuck in a tree.'},
-      {'title' => 'Arrggh! The cats, they\'re eating my face', 'body' => 'Puking adipiscing chase the red dot rip the couch, biting vulputate faucibus ac vel rutrum.'},
-      {'title' => 'I love cats', 'body' => '<object style="height: 390px; width: 640px"><param name="movie" value="http://www.youtube.com/v/sP4NMoJcFd4?version=3&feature=player_detailpage"><param name="allowFullScreen" value="true"><param name="allowScriptAccess" value="always"><embed src="http://www.youtube.com/v/sP4NMoJcFd4?version=3&feature=player_detailpage" type="application/x-shockwave-flash" allowfullscreen="true" allowScriptAccess="always" width="640" height="360"></object>' }
+      {'title' => 'OMG I love cats!', 'body' => 'Suscipit jump biting tail flick tortor shed everywhere, feed me jump sleep on your face pharetra pharetra.', 'network' => 'twitter'},
+      {'title' => 'No I mean like I seriously love cats!', 'body' => 'Meow sleep in the sink chase the red dot I don\'t like that food, tortor kittens rhoncus sleep on your keyboard quis nunc stuck in a tree.', 'network' => 'facebook'},
+      {'title' => 'Arrggh! The cats, they\'re eating my face', 'body' => 'Puking adipiscing chase the red dot rip the couch, biting vulputate faucibus ac vel rutrum.', 'network' => 'twitter'},
+      {'title' => 'I love cats', 'body' => '<object style="height: 390px; width: 640px"><param name="movie" value="http://www.youtube.com/v/sP4NMoJcFd4?version=3&feature=player_detailpage"><param name="allowFullScreen" value="true"><param name="allowScriptAccess" value="always"><embed src="http://www.youtube.com/v/sP4NMoJcFd4?version=3&feature=player_detailpage" type="application/x-shockwave-flash" allowfullscreen="true" allowScriptAccess="always" width="640" height="360"></object>', 'network' => 'facebook'}
     ]
   end
 
