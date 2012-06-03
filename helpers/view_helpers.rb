@@ -78,4 +78,12 @@ class RandomData; class << self
     ].sample
   end
 
+  def posts
+    [
+      {'title' => 'OMG I love cats!', 'body' => 'Suscipit jump biting tail flick tortor shed everywhere, feed me jump sleep on your face pharetra pharetra.'},
+      {'title' => 'No I mean like I seriously love cats!', 'body' => 'Meow sleep in the sink chase the red dot I don\'t like that food, tortor kittens rhoncus sleep on your keyboard quis nunc stuck in a tree.'},
+      {'title' => 'Arrggh! The cats, they\'re eating my face', 'body' => 'Puking adipiscing chase the red dot rip the couch, biting vulputate faucibus ac vel rutrum.'}
+    ]
+  end
+
 end; end
