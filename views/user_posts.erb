@@ -5,7 +5,7 @@
       <a class="tile-post-link" href="">
         <span class="tile-user-post-wrapper">
           <span class="tile-user-link-content">
-            <p class="title"><%= post['title'] %> <small>- 16th July 1969</small></p><p><%= post_via(post) if post['network'] %></p>
+            <p class="title"><%= post['title'] %> <small>- <%= RandomData.date %></small></p><p><%= post_via(post) if post['network'] %></p>
             <p><%= post['body'] %></p>
           </span>
         </span>

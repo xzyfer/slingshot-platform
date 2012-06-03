@@ -82,6 +82,16 @@ class RandomData; class << self
     ].sample
   end
 
+  def date
+    "#{rand(20)+5}th #{month} #{rand(10)+2002}"
+  end
+
+  def month
+    ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+     "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+    ].sample
+  end
+
   def posts
     [
       {'title' => 'OMG I love cats!', 'body' => 'Suscipit jump biting tail flick tortor shed everywhere, feed me jump sleep on your face pharetra pharetra.', 'network' => 'twitter'},
