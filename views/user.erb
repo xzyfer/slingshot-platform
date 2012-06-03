@@ -4,53 +4,53 @@
 
 <div class="profile clearfix">
 
-	<div class="profile-nav">
-		<div class="profile-thumb-wrapper">
-			<img class="profile-thumb" src="/images/status-cats/<%= @user['image'] %>.jpeg" width="140" height="190" />
-		</div>
-		<div class="menu-list-wrapper">
-			<ul class="menu-list">
-				<li class="menu-list-item current">
-					<a class="menu-list-item-link" href="">Profile</a>
-				</li>
-				<li class="menu-list-item">
-					<a class="menu-list-item-link" href="">Posts</a>
-				</li>
-				<li class="menu-list-item">
-					<a class="menu-list-item-link" href="">Photos</a>
-				</li>
-			</ul>
-		</div>
-	</div>
+  <div class="profile-nav">
+    <div class="profile-thumb-wrapper">
+      <img class="profile-thumb" src="/images/status-cats/<%= @user['image'] %>.jpeg" width="140" height="190" />
+    </div>
+    <div class="menu-list-wrapper">
+      <ul class="menu-list">
+        <li class="menu-list-item <%= "current" if user_view_is? :profile %>">
+        <a class="menu-list-item-link" href="<%= link_to_user_view("profile") %>">Profile</a>
+        </li>
+        <li class="menu-list-item <%= "current" if user_view_is? :posts  %>">
+        <a class="menu-list-item-link" href="<%= link_to_user_view("posts") %>">Posts</a>
+        </li>
+        <li class="menu-list-item <%= "current" if user_view_is? :photos %>">
+        <a class="menu-list-item-link" href="<%= link_to_user_view("photos") %>">Photos</a>
+        </li>
+      </ul>
+    </div>
+  </div>
 
-	<div class="profile-content-wrapper">
+  <div class="profile-content-wrapper">
 
-		<div class="profile-content-banner">
-			<p class="title"><%= @user['name'] %></p>
+    <div class="profile-content-banner">
+      <p class="title"><%= @user['name'] %></p>
 
-			<hr />
+      <hr />
 
-			<ul class="profile-info-list">
-				<li class="profile-info-list-item">
-					<p class="title">Address</p>
-					<p><a href="" target="blank">123 Candy Cane Lane, Wonderland, 1234</a></p>
-				</li>
-				<li class="profile-info-list-item">
-					<p class="title">Phone</p>
-					<p><a href="tel:180012341234">1800 MEOW MEOW</a></p>
-				</li>
-				<li class="profile-info-list-item">
-					<p class="title">Email</p>
-					<p><a href="mailto:happykitty@email.com">happykitty@email.com</a></p>
-				</li>
-				<li class="profile-info-list-item">
-					<p class="title">Website</p>
-					<p><a href="http://happykitty.com" target="blank">www.happykitty.com</a></p>
-				</li>
-			</ul>
-		</div>
+      <ul class="profile-info-list">
+        <li class="profile-info-list-item">
+          <p class="title">Address</p>
+          <p><a href="" target="blank">123 Candy Cane Lane, Wonderland, 1234</a></p>
+        </li>
+        <li class="profile-info-list-item">
+          <p class="title">Phone</p>
+          <p><a href="tel:180012341234">1800 MEOW MEOW</a></p>
+        </li>
+        <li class="profile-info-list-item">
+          <p class="title">Email</p>
+          <p><a href="mailto:happykitty@email.com">happykitty@email.com</a></p>
+        </li>
+        <li class="profile-info-list-item">
+          <p class="title">Website</p>
+          <p><a href="http://happykitty.com" target="blank">www.happykitty.com</a></p>
+        </li>
+      </ul>
+    </div>
 
-		<div class="profile-content">
+    <div class="profile-content">
       <%= case params[:view]
          when "photos"
            erb :user_photos
@@ -60,9 +60,8 @@
            erb :user_profile
          end
          %>
-		</div>
+    </div>
 
-	</div>
+  </div>
 
 </div>
-
