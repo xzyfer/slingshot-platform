@@ -149,6 +149,11 @@ nav a:hover{
   width: 975px;
 }
 
+object {
+  margin-top: 10px;
+  display: block;
+}
+
 .center {
   text-align: center;
 }
