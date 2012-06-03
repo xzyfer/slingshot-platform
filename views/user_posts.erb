@@ -5,7 +5,13 @@
       <a class="tile-post-link" href="">
         <span class="tile-user-post-wrapper">
           <span class="tile-user-post-content">
-            <p class="title"><%= post['title'] %> <small>- <%= RandomData.date %></small></p><p><%= post_via(post) if post['network'] %></p>
+            <p class="title">
+              <%= post['title'] %>
+              <small>- <%= RandomData.date %>
+                <% if post['network'] %>
+                <%= post_via(post) if post['network'] %> <img src="/images/<%= post['network'] %>_16.png" width="10" style="vertical-align: top;" /> <%end %>
+              </small>
+            </p>
             <p><%= post['body'] %></p>
           </span>
         </span>
