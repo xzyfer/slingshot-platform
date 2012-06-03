@@ -43,13 +43,17 @@ get '/user/:userid/:view' do
   erb :user
 end
 
-get '/search/:name' do
+post '/search' do
   @param = params[:name]
   @users = mongo('user').find('name' => /.*#{@param}.*/i).to_a
   erb :search_results
 end
 
-post '/search' do
+get '/search' do
+    erb :index
+end
+
+get '/search/:name' do
   @param = params[:name]
   @users = mongo('user').find('name' => /.*#{@param}.*/i).to_a
   erb :search_results
