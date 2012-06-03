@@ -1,0 +1,12 @@
+
+<ul class="tile-collection tile-collection-user-photos">
+	<% @photos.each do |photo| %>
+		<li class="tile tile-user-photo">
+			<a class="tile-user-link" href="">
+				<span class="tile-user-image-wrapper">
+					<img class="tile-user-image" src="/images/status-cats/<%= photo %>.jpeg" width="80" height="80" />
+				</span>
+			</a>
+		</li>
+	<% end %>
+</ul>

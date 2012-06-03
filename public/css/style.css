@@ -226,13 +226,18 @@ nav a:hover{
   margin: .2em 0;
 }
 
-.tile-user {
+.tile-user,
+.tile-user-photo {
   list-style-type: none;
   display: inline-block;
   margin: 0 15px 15px 0;
 }
 
 .tile-user:nth-child(8n) {
+  margin-right: 0;
+}
+
+.tile-user-image:nth-child(6n) {
   margin-right: 0;
 }
 

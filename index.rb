@@ -34,6 +34,11 @@ end
 
 get '/user/:userid/:view' do
   @user = mongo('user').find('id' => 1).to_a.first
+
+  if params[:view] == 'photos'
+    @photos = mongo('user').find({}).map { |u| u['image'] }
+  end
+
   erb :user
 end
 
