@@ -34,7 +34,7 @@ end
 
 get '/user/:userid/:view' do
   @param = params[:param]
-  @user = mongo('user').find('id' => 1).to_a.first
+  @user = mongo('user').find('id' => params[:userid].to_i).to_a.first
 
   if params[:view] == 'photos'
     @photos = mongo('user').find({}).map { |u| u['image'] }
